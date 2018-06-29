@@ -1,0 +1,39 @@
+2.3 JavaScript: Forms and JSON Lab
+
+1.    Create an html page in which you have a form.
+2.    In that form, have at least one text input field called “color” and a submit button.
+3.    In an external JavaScript file which you include in your HTML file, capture the form submission (i.e., the page should not refresh after you click the submit button).
+4.    If the text input is empty, bring up an alert telling the user that the input is invalid.
+5.    If the text input is not empty, construct a JSON object like so: 
+    {“favoriteColor”: <user input here>}
+6.    Log the JSON object in the console.
+
+index.html
+<form id="favColor">
+    <script type="text/javascript" src="check.js"></script>
+    <fieldset>
+        <div>
+            <label>fav color:</label>
+            <input id="input" type="text" name="favColor">
+        </div>
+        <div>
+            <input type="submit" value="Submit">
+        </div>
+    </fieldset>
+</form>
+
+check.js
+window.onload = function() {
+ 
+    var form = document.getElementById("favColor");
+    
+    form.addEventListener("submit", function(e) {
+            e.preventDefault();
+            var data = document.getElementById("input").value;
+            if (data==="") {
+                alert("this is invalid");
+            } else {
+                console.log({"favColor": data})
+            } return false;
+    });    
+ }

@@ -1,0 +1,45 @@
+2.1 JavaScript: Basics Lab
+
+PART 1
+
+What are the data types of the following?
+1.    var foo = “bar”; //string 
+2.    var bar = 231; //number
+3.    var boo = false; //boolean
+4.    var aoo = “true”; //string 
+5.    var oar = “5321.31”; //string
+6.    var hoo; //undefined
+7.    var tree = {family:“evergreen”, name:“pine”}; //object
+
+PART 2
+
+Which of the following is not valid?
+A.    var x = 3, y = 4, z = “there”, a = “true”; 
+B.    var w = “number:” + 7 
+C.    var okay;
+Okay = 5;
+//c because its case sensitive  
+
+PART 3
+
+Create a function that takes in a number (called num) and string (called noun). Then returns the square of the number concatenated with the string. Ex: calling my_func(4, “hi”) returns 16 hi
+//function squareNumber(num, noun) {
+//   let squareNumber = num * num + " " + noun;
+//   return squareNumber;
+//}
+//undefined
+//squareNumber(7, "gladys");
+//"49 gladys"
+
+PART 4
+
+Go through the function. What will text contain?
+var mylist = [1, “David”, “Julia”, 21, “Gina”, 932, 53, 0, “Sean”]
+var text = “”;
+var x;
+for (x in mylist) {
+ if (x === “David”) { continue; }
+ if (x === 53) {break;}
+ text += x + “,”;
+}
+// the text will contain 1, Julia, 21, Gina, 932

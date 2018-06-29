@@ -1,0 +1,37 @@
+2.2 JavaScript: Interacting with HTML - Lab
+
+Read through the code below and fill out the missing parts!
+●    The HTML sets up a simple page with a number and two buttons that should manipulate the number when clicked.
+●    If some JavaScript code isn’t working, try using “console.log” and “debugger” to debug!
+
+index.html
+<html>
+ <script type="text/javascript" src="click.js"></script>
+ <body>
+   <div id="theNumber">0</div>
+   <button id="addButton">+</button>
+   <button id="minusButton">-</button>
+ </body>
+</html>
+
+click.js
+document.addEventListener('DOMContentLoaded', function(event) {
+    var theNumber = document.getElementById('theNumber');
+    var buttonAdd = document.getElementById('buttonAdd');
+    var buttonMinus = document.getElementById('buttonMinus');
+    
+    /* when a user clicks on the add button, the number shown on
+    the page should increase by 1 */
+    buttonAdd.addEventListener('click', function() {
+        theNumber.innerHTML = parseInt(theNumber.innerHTML) +1;
+        
+    });
+
+    /* when user clicks on the minus button, the number shown on
+    the page should decrease by 1 */
+    buttonMinus.addEventListener('click', function() {
+        theNumber.innerHTML = parseInt(theNumber.innerHTML) -1;
+        
+    });
+   
+   });

@@ -1,0 +1,53 @@
+2.4 JavaScript: JQuery and AJAX Lab
+
+1.    Update your lab from yesterday to use jQuery, and make sure it still works.
+2.    Include an AJAX call in your JavaScript code, after you’ve logged the user’s input. The AJAX call should make a GET call to:
+
+https://query.yahooapis.com/v1/public/yql?q=select%20item.condition%20from%20weather.forecast%20where%20woeid%20%3D%202487889&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys
+(This is the Yahoo! Weather API, fetching weather data for San Diego, CA. You can simply open this link in the browser to see the data it returns.)
+
+Log the response data in the console.
+3.    Drill down in the result data to print out the “text” field.
+
+Your console output should look something like this: [an image here]
+
+index.html
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>    
+</head>
+<form id="favColor">
+        <script type="text/javascript" src="check.js"></script>
+        <fieldset>
+            <div>
+                <label>fav color:</label>
+                <input id="input" type="text" name="favColor">
+            </div>
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+        </fieldset>
+    </form>
+    
+    check.js
+    window.onload = function() {
+
+    var form = $("#favColor");
+    
+    form.submit(function(e) {
+        const url = "https://query.yahooapis.com/v1/public/yql?q=
+        select%20item.condition%20from%20weather.forecast%20where%20woeid%20%3D%20248
+        7889&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys";
+
+            e.preventDefault();
+            var data = $("#input").val();
+            if (data==="") {
+                alert("this is invalid");
+            } else {
+                console.log({"favColor": data});
+                $.get(url, function(data) {
+                    console.log(data);
+                })
+
+            } return false;
+    });    
+ }
