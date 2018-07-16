@@ -2,31 +2,37 @@
 <html>
     <head>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    </head>
-    <form id="weatherApp">
+        <link rel="stylesheet" type="text/css" href="style.css">
         <title>Weather Updates</title>
-        <script type="text/javascript" src="weather.js"></script>
-        <h1 style="text-align:center;">Weather Updates</h1>
-        <fieldset>
-            <div>
-                <label>Cities:</label>
-                <select id="cities" name="cities">
-                    <option value="Seattle, WA">Seattle, WA</option>
-                    <option value="Chicago, IL">Chicago, IL</option>
-                    <option value="Houston, TX">Houston, TX</option>
-                    <option value="Portland, OR">Portland, OR</option>
-                    <option value="Palo Alto, CA">Palo Alto, CA</option>
-                </select>
-            </div>
-        </fieldset>
-        <button type="submit">Get Weather</button>
-    </form>
+    </head>
+    <body>
 
-    <section id="weatherDisplay">
-        <h2 class="city-name"></h2>
-        <dl>
-            <dd class="weather-condition"></dd>
-            <dd class="weather-temp"></dd>
-        </dl>
-    </section>
+        <form id="weatherApp">
+            <script type="text/javascript" src="weather.js"></script>
+            <h1 style="text-align:center;">Weather Updates</h1>
+            
+            <fieldset>
+                <div>
+                    <center><label for="cities">Cities:</label></center>
+                    <center><select id="cities" name="cities"></center>
+                        <option value="Seattle, WA">Seattle, WA</option>
+                        <option value="Chicago, IL">Chicago, IL</option>
+                        <option value="Houston, TX">Houston, TX</option>
+                        <option value="Portland, OR">Portland, OR</option>
+                        <option value="Palo Alto, CA">Palo Alto, CA</option>
+                    </select>
+                </div>
+            </fieldset>
+            <center><button id="submitButton" type="submit">Get Weather</button></center>
+        </form>
+
+        <section id="weatherDisplay">
+            <h2 class="city-name"></h2>
+            <dl>
+                <dd class="weather-condition"></dd>
+                <dd class="weather-temp"></dd>
+            </dl>
+        </section>
+        <div class="image"></div>
+    </body>
 </html>

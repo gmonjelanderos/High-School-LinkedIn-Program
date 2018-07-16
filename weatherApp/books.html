@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <title>Books</title>
+    </head>
+    <form id="bookUpdates">
+        <script type="text/javascript" src="books.js"></script>
+        <h1 style="text-align:center;">Books</h1>
+        <fieldset>
+            <div>
+                <label for="books">Books:</label>
+                <select id="books" name="books">
+                    <option value="1">Divergent</option>
+                    <option value="2">The Fault in our Stars</option>
+                    <option value="3">The Giver</option>
+                    <option value="4">The Outsiders</option>
+                    <option value="5">The Hate U Give</option>
+                </select>
+            </div>
+        </fieldset>
+        <button id="submitButton" type="submit">Get Info</button>
+    </form>
+
+    <section id="bookDisplay">
+        <h2 class="book-title"></h2>
+        <dl>
+            <dd class="book-author"></dd>
+            <dd class="book-description"></dd>
+        </dl>
+    </section>
+</html>
